@@ -5,7 +5,6 @@ const bodyParser=require("body-parser");
 const {port}=require("./config/serverConfig");
 
 
-
 const setupAndStartServer=async()=>{
     
     //create 

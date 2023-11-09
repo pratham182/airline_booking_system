@@ -3,5 +3,5 @@ const dotenv=require("dotenv");
 dotenv.config();
 
 module.exports={
-    port:process.env.port
+    port:3000
 }
