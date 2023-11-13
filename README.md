@@ -17,5 +17,24 @@
   }
 }
 ```
+```
 
+
+-After you have execute `npx sequelize db:create`
+
+and then execute
+`npx sequelize db:migrate`
+
+
+```
+## DB design
+  - Airplane Table
+  - Flight
+  - Airport
+  - City
+   
+   -Association
+   A fight belongs to an airplane but one airplane can be used in multiple flights
+   A city has many airports but one airpors belongs to a city
+   One airport can have many flights ,but a flight belongs to one airport
 

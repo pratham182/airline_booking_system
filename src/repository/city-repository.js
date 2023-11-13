@@ -20,6 +20,35 @@ async deleteCity({cityid}){
    throw {err};
     }
 }
+
+
+async UpdateCity(cityId,data){
+  try{
+     const city=await City.update(data,{
+      where:{
+        id:cityId
+      }
+     })
+     return city;
+  }
+  catch(err){
+     throw{err};
+  }
 }
+
+async getCity(cityId){
+  try{
+    const city=await City.findByPk(cityId);
+    return city;
+    
+  }catch(err){
+    throw{err};
+  }
+}
+
+
+}
+
+
 
 module.exports=CityRepository;
