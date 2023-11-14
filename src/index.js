@@ -1,13 +1,12 @@
 const express=require("express");
-
 const bodyParser=require("body-parser");
 
 const {port}=require("./config/serverConfig");
-const {City}=require("./models/index");
-const city_repo=require("./repository/city-repository");
-//const city = require("./models/city");
+
+const ApiRoutes = require("./routes/index");
 
 const setupAndStartServer=async()=>{
+
     
     //create 
     const app=express();
@@ -17,13 +16,15 @@ const setupAndStartServer=async()=>{
         extended:true
     }))
    
-
+    app.use("/api",ApiRoutes);
 
     app.listen(port,async()=>{
 
         console.log(`App is listening on port ${port}`);
-         const repo=new city_repo();
-        repo.deleteCity({id:1});
+        
+
+       
+
     
     });
 }

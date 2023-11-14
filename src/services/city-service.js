@@ -8,7 +8,8 @@ class CityService{
     async createCity(data){
         
         try{
-          const city=await this.CityRepository.createCity(data);
+        //   const city=await this.CityRepository.createCity(data);
+        const city=CityRepository.createCity(data);
           return city;
         }catch(err){
        console.log("Something went wrong");
@@ -16,7 +17,7 @@ class CityService{
         } 
     }
 
-    async deleteCity(){
+    async deleteCity(cityId){
         try{
          const res=this.CityRepository.deleteCity(cityId);
          return res;
@@ -39,7 +40,7 @@ class CityService{
 
     }
 
-    async getCity(){
+    async getCity(cityId){
         try{
          const city=await this.CityRepository.getCity(cityId);
          return city;
@@ -52,4 +53,4 @@ class CityService{
 
 }
 
-module.exports=CityService
+module.exports=CityService;
