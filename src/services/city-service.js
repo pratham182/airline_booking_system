@@ -30,7 +30,7 @@ class CityService{
 
     async updateCity(cityId,data){
         try{
-            const city=await this.CityRepository.UpdateCity(cityId,data);
+            const city=await this.CityRepository.updateCity(cityId,data);
             return city;
          
         }catch(err){

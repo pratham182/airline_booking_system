@@ -30,7 +30,7 @@ try{
 //delete -> /city/:id
 const destroy =async(req,res)=>{
     try{
-        console.log(req.params.id);
+        
          const response=await CityServices.deleteCity(req.params.id);
          
          return res.status(201).json({
