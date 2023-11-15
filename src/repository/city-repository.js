@@ -48,6 +48,17 @@ async getCity(cityId){
     throw{err};
   }
 }
+async getAllCities(){
+  try{
+    const cities= await City.findAll();
+    return cities;
+
+
+  }catch(err){
+    console.log("Something went wrong with repo layer");
+    throw{err};
+  }
+}
 
 
 }

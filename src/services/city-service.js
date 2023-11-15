@@ -50,6 +50,15 @@ class CityService{
         } 
 
     }
+    async getAllCities(){
+        try{
+            const cities=await this.CityRepository.getAllCities();
+            return cities;
+        }catch(err){
+            console.log("Something went wrong");
+            throw {err};
+        }
+    }
 
 }
 
