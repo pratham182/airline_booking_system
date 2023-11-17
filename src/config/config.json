@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": null,
+    "password": "pratham@1",
     "database": "Flight_search",
     "host": "localhost",
     "dialect": "mysql"

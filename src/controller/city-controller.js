@@ -8,7 +8,7 @@ data ->req.body
 const CityServices= new CityService();  //object
 
 const create =async(req,res)=>{
-try{
+    try{
      const city=await CityServices.createCity(req.body);
      return res.status(201).json({
          data:city,
