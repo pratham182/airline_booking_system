@@ -38,3 +38,10 @@ and then execute
    A city has many airports but one airpors belongs to a city
    One airport can have many flights ,but a flight belongs to one airport
 
+
+  ## tables
+  
+  ### City -> id,name,create_at ,updated_at
+  ### Airport -> id,name,address,city_id,created_at,updated_at
+     Relationship-> City has many airports and airport belongs to a city (one to many relationship)
+
